@@ -13,7 +13,7 @@ db.init_app(app)
 from admin import admin
 admin.init_app(app)
 
-import my_test_project.routes
+import routes
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
