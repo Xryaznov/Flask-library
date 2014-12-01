@@ -1,1 +1,1 @@
-web: gunicorn app//my_test_project/__init__:app --log-file -
+web: python dealscraper app/my_test_project/__init__.py
