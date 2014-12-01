@@ -3,7 +3,6 @@ from flask_admin.contrib.sqla import ModelView
 
 admin = Admin()
 
-
 class MyHomeView(AdminIndexView):
     @expose('/')
     def index(self):
@@ -11,6 +10,9 @@ class MyHomeView(AdminIndexView):
 
 
 admin = Admin(index_view=MyHomeView())
+
+admin.add_view(MyHomeView(endpoint='testadmin'))
+
 
 from models import db, Book, User, Author
 
