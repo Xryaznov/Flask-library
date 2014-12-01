@@ -1,8 +1,9 @@
-import app
-from flask import render_template, request, flash, session, redirect, url_for
+
+from flask import render_template, request, flash, session, redirect, url_for, Flask
 from forms import SignupForm, SigninForm, AddbookForm
 from models import db, User, Book, Author
 
+app = Flask(__name__)
 
 @app.route('/')
 def home():
