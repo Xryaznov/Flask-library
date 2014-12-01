@@ -1,0 +1,39 @@
+{% extends admin_base_template %}
+
+
+
+
+{% block body%}
+<style>
+.menu {
+  float: left;
+  margin-top: 8px;
+}
+
+.menu li a {
+  color: #999;
+  text-decoration: none;
+}
+</style>
+
+<p style="color: grey">Hello, here you can delete, edit books, authors or users.</p>
+        <br>
+        <strong>
+            <nav>
+                <ul class="menu">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                    <li><a href="{{url_for('addbook')}}">Add Book</a></li>
+
+                    {% if 'email' in session %}
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                    <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                    <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+              </strong>
+
+{% endblock %}
