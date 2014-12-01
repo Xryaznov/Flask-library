@@ -1,6 +1,6 @@
 from flask_wtf import Form
 from wtforms import StringField, TextAreaField, SubmitField, validators, PasswordField, SelectMultipleField
-from my_test_project.models import User, Book
+from models import User, Book
 
 class SignupForm(Form):
     firstname = StringField("First name", [validators.DataRequired("Please enter your first name.")])
