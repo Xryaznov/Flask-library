@@ -1,1 +1,1 @@
-web: python dealscraper app/my_test_project/__init__.py
+web: python app/my_test_project/__init__.py
