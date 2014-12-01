@@ -1,5 +1,4 @@
-from flask_admin import expose
-from my_test_project import app
+import app
 from flask import render_template, request, flash, session, redirect, url_for
 from forms import SignupForm, SigninForm, AddbookForm
 from models import db, User, Book, Author
