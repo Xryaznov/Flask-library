@@ -7,7 +7,6 @@ admin = Admin()
 class MyHomeView(AdminIndexView):
     @expose('/')
     def index(self):
-
         return self.render('adminhome.html')
 
 

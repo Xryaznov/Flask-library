@@ -78,11 +78,6 @@ def profile():
     else:
         return render_template('profile.html')
 
-@app.route('/admin')
-def admin():
-        return redirect('/admin')
-
-
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     form = SigninForm()
